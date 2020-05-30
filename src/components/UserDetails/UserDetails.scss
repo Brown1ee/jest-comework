@@ -1,0 +1,14 @@
+.user-details {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 28px;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.user-details__info {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}

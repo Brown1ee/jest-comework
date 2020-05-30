@@ -1,0 +1,33 @@
+.user-details__summary-bg {
+  width: 100%;
+  height: 100%;
+  background-color: #363A41;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform-origin: bottom left;
+  transform: skew(-15deg, 0deg);
+  position: absolute;
+  left: -75px;
+}
+.user-details__summary {
+  width: 300px;
+  position: relative;
+  z-index: 2;
+}
+
+.user-details__summary-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  right: 33px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-details-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}

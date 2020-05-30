@@ -1,0 +1,31 @@
+.search-box {
+  width: 100%;
+  border: 1px solid #eee;
+  border-radius: 28px;
+  background: white;
+  color: #333;
+  overflow: hidden;
+  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.27);
+
+  .search-box__input {
+    padding: 0 25px;
+
+    input {
+      border: none;
+      width: 100%;
+      padding: 20px 0;
+      box-sizing: border-box;
+      outline: none;
+      font-size: 16px;
+      background: white;
+    }
+  }
+
+  .search-box__content {
+    border-top: 1px solid #eee;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+}
