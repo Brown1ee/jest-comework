@@ -5,10 +5,11 @@ import PageTitle from "./PageTitle";
 
 describe("<PageTitle />", function () {
   it("should match the snapshot", () => {
-    const { getByTestId } = render(<PageTitle label="Github user details" />);
+    const {
+      container: { firstChild },
+    } = render(<PageTitle label="Github user details" />);
 
-    const pageTitle = getByTestId("page-title");
-    expect(pageTitle).toMatchSnapshot();
+    expect(firstChild).toMatchSnapshot();
 
     /**
      * Write a snapshot test for PageTitle component

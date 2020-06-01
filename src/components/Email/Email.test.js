@@ -7,9 +7,9 @@ describe("<Email />", function () {
     const { getByTestId } = render(<Email value={email} />);
 
     const emailButton = getByTestId("show-email-button");
-    const emailComponent = getByTestId("show-email-button");
-    expect(emailButton).toBeInTheDocument();
+    const emailComponent = getByTestId("show-email-component");
     expect(emailComponent).not.toHaveTextContent(email);
+    expect(emailButton).toBeVisible();
 
     /**
      * Check if the right button is displayed
@@ -23,16 +23,18 @@ describe("<Email />", function () {
   it("should renders value when button clicked", () => {
     const email = "email@email.com";
 
-    const { getByTestId } = render(<Email value={email} />);
-
+    const {
+      container: { firstChild },
+      debug,
+      getByTestId,
+    } = render(<Email value={email} />);
     const emailButton = getByTestId("show-email-button");
-    const emailComponent = getByTestId("show-email-component");
 
-    expect(emailButton).toBeInTheDocument();
-    expect(emailComponent).toHaveTextContent("show email");
     fireEvent.click(emailButton);
+
     expect(emailButton).not.toBeInTheDocument();
-    expect(emailComponent).not.toHaveTextContent("show email");
+    expect(firstChild).toHaveTextContent(email);
+    debug();
 
     /**
      * After button was clicked
